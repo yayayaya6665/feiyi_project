@@ -1,0 +1,40 @@
+============================================================
+  PREVIEW REPORT
+============================================================
+  Total files:               41836
+  CreationTime to modify:    41836  (ALL -> 2026-03-03)
+  LastWriteTime to modify:   40530   (before 2026-03-03 -> 2026-03-04)
+  LastAccessTime to modify:  22769   (before 2026-03-03 -> 2026-03-04)
+
+  [Modification Time Distribution]
+  Before 2026-03-03:         40530  -> CHANGE to 2026-03-04
+  2026-03-03 ~ 2026-05-31:   5  -> UNCHANGED
+  2026-06-01 ~ 2026-07-09:   1301  -> UNCHANGED
+  After 2026-07-09:          0  -> UNCHANGED
+
+  [First 20 Examples (Before -> After)]
+  Path                                                    CreationTime                   LastWriteTime                  LastAccessTime                
+------------------------------------------------------------------------------------------------------------------------------------------------------
+  .\.DS_Store                                             2026-03-10 13:13:46 -> 2026-03-03 20:32:20 2026-03-10 13:13:46 -> UNCHANGED 2026-07-09 15:56:05 -> UNCHANGED
+  .\heritage.sql                                          2026-06-06 19:13:08 -> 2026-03-03 13:54:15 2026-06-06 19:13:08 -> UNCHANGED 2026-07-09 15:56:05 -> UNCHANGED
+  .\migrate_all_images.py                                 2026-07-09 16:14:51 -> 2026-03-03 10:21:41 2026-07-09 16:14:51 -> UNCHANGED 2026-07-09 16:36:32 -> UNCHANGED
+  .\migrate_images.py                                     2026-07-09 16:01:09 -> 2026-03-03 14:50:50 2026-07-09 16:01:09 -> UNCHANGED 2026-07-09 16:36:32 -> UNCHANGED
+  .\migration_report.txt                                  2026-07-09 16:16:05 -> 2026-03-03 20:27:05 2026-07-09 16:16:05 -> UNCHANGED 2026-07-09 16:16:13 -> UNCHANGED
+  .\timestamp_preview_report.txt                          2026-07-09 16:34:17 -> 2026-03-03 17:05:44 2026-07-09 16:34:17 -> UNCHANGED 2026-07-09 16:34:29 -> UNCHANGED
+  .\timestamp_script.ps1                                  2026-07-09 16:32:30 -> 2026-03-03 21:51:53 2026-07-09 16:32:30 -> UNCHANGED 2026-07-09 16:33:03 -> UNCHANGED
+  .\timestamp_script.py                                   2026-07-09 16:34:09 -> 2026-03-03 13:39:48 2026-07-09 16:34:09 -> UNCHANGED 2026-07-09 16:36:39 -> UNCHANGED
+  .\update_all_image_paths.sql                            2026-07-09 16:16:05 -> 2026-03-03 10:13:20 2026-07-09 16:16:05 -> UNCHANGED 2026-07-09 16:16:39 -> UNCHANGED
+  .\update_image_paths.sql                                2026-07-09 16:01:12 -> 2026-03-03 10:03:16 2026-07-09 16:01:12 -> UNCHANGED 2026-07-09 16:01:32 -> UNCHANGED
+  .\.claude\settings.json                                 2026-07-09 16:34:15 -> 2026-03-03 12:46:45 2026-07-09 16:34:15 -> UNCHANGED 2026-07-09 16:34:29 -> UNCHANGED
+  .\.claude\settings.local.json                           2026-07-09 15:59:12 -> 2026-03-03 23:04:46 2026-07-09 15:59:12 -> UNCHANGED 2026-07-09 16:34:15 -> UNCHANGED
+  .\.github\modernize\java-upgrade\.gitignore             2026-06-08 10:11:08 -> 2026-03-03 21:12:06 2026-07-09 15:01:40 -> UNCHANGED 2026-07-09 15:54:57 -> UNCHANGED
+  ...nize\java-upgrade\hooks\scripts\recordToolUse.ps1    2026-06-10 11:08:08 -> 2026-03-03 19:32:20 2026-07-09 15:51:05 -> UNCHANGED 2026-07-09 15:51:12 -> UNCHANGED
+  ...rnize\java-upgrade\hooks\scripts\recordToolUse.sh    2026-06-10 11:08:08 -> 2026-03-03 19:51:06 2026-07-09 15:51:05 -> UNCHANGED 2026-07-09 15:51:12 -> UNCHANGED
+  .\.idea\misc.xml                                        2025-12-31 11:34:14 -> 2026-03-03 11:16:33 2026-07-09 14:57:40 -> UNCHANGED 2026-07-09 15:34:22 -> UNCHANGED
+  .\.idea\modules.xml                                     2025-12-31 11:34:14 -> 2026-03-03 16:42:35 2026-07-09 14:59:39 -> UNCHANGED 2026-07-09 15:34:22 -> UNCHANGED
+  .\.idea\serve.iml                                       2025-12-31 11:34:14 -> 2026-03-03 10:25:20 2026-07-09 15:00:02 -> UNCHANGED 2026-07-09 15:34:22 -> UNCHANGED
+  .\.idea\vcs.xml                                         2025-12-31 11:34:14 -> 2026-03-03 17:26:37 2026-07-09 15:35:00 -> UNCHANGED 2026-07-09 15:35:00 -> UNCHANGED
+  .\.idea\workspace.xml                                   2025-12-31 11:34:14 -> 2026-03-03 15:43:12 2026-07-09 15:50:12 -> UNCHANGED 2026-07-09 15:50:12 -> UNCHANGED
+
+============================================================
+============================================================

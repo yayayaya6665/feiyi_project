@@ -1,0 +1,73 @@
+============================================
+  非遗文化平台 —— 使用说明
+============================================
+
+【环境要求】
+- JDK 17+
+- MySQL 8.0+
+- Node.js 18+
+- Maven（项目自带 mvnw，无需单独安装）
+
+============================================
+  第一步：导入数据库
+============================================
+
+1. 启动 MySQL 服务
+2. 用 root 用户登录 MySQL，创建数据库并导入：
+
+   mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS heritage DEFAULT CHARACTER SET utf8mb4;"
+   mysql -u root -p heritage < heritage_with_data.sql
+
+   （默认密码在 springboot/src/main/resources/application.yml 中，
+    可自行修改 datasource 下的 username 和 password）
+
+3. 导入后数据库包含 28 张表、完整测试数据（课程、活动、商品、帖子等）
+
+============================================
+  第二步：启动后端
+============================================
+
+双击 springboot/run.bat
+
+或者命令行：
+  cd springboot
+  mvnw.cmd spring-boot:run
+
+后端启动在 http://localhost:8889
+Swagger 文档：http://localhost:8889/swagger-ui.html
+
+============================================
+  第三步：启动前端
+============================================
+
+1. 进入 vue3 目录
+2. 安装依赖（仅首次需要）：
+   npm install
+3. 启动开发服务器：
+   npm run dev
+
+前端启动在 http://localhost:8800
+
+============================================
+  测试账号
+============================================
+
+用户名：admin
+密码：  admin123
+
+============================================
+  注意事项
+============================================
+
+1. 如果端口被占用，修改配置：
+   - 后端端口：springboot/src/main/resources/application.yml 中的 server.port
+   - 前端端口：vue3/vite.config.js 中的 server.port
+   - 同时修改 vite.config.js 中 proxy 的 target 地址
+
+2. 首次运行 mvnw.cmd 会自动下载 Maven（需要网络）
+
+3. 图片/文件存储在 springboot/files/ 目录下
+
+4. MySQL 默认连接：127.0.0.1:3306，用户名 root，密码 mysql123456
+   如需修改，编辑 springboot/src/main/resources/application.yml
+   找到 datasource 段落修改即可

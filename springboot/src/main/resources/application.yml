@@ -1,0 +1,139 @@
+spring:
+  application:
+    name: springboot
+  
+  # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/heritage?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    hikari:
+      # 核心：放宽管家线程的超时阈值（默认10秒，改为60秒）
+      housekeeping-timeout: 60000
+      # 可选：调整连接池核心参数（根据服务器配置优化）
+      maximum-pool-size: 20  # 最大连接数（默认10，根据CPU核心数调整，建议CPU核心数*2+1）
+      minimum-idle: 5        # 最小空闲连接（默认与max相同，建议设为max的1/4）
+      idle-timeout: 300000   # 空闲连接超时（默认600000，5分钟）
+      connection-timeout: 30000 # 连接超时（默认30000，30秒）
+      max-lifetime: 1800000  # 连接最大存活时间（默认1800000，30分钟）
+      leak-detection-threshold: 60000 # 连接泄漏检测阈值（默认0关闭，开启为60秒）
+  
+  # 安全配置
+  security:
+    user:
+      name: admin
+      password: admin
+  main:
+    allow-bean-definition-overriding: true
+#    web-application-type: reactive  # 启用响应式支持deepseek
+  # 邮件配置
+  mail:
+    host: smtp.qq.com
+    username: 2841463013@qq.com
+    password: nskertmawxweddfi
+    default-encoding: utf-8
+    port: 587
+    properties:
+      mail:
+        debug: true
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            protocols: TLSv1.2
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+  
+  # Web配置
+  mvc:
+    static-path-pattern: /**  # 允许根路径访问静态资源
+  web:
+    resources:
+      static-locations: classpath:/static/, file:./files/  # 添加files目录
+  
+  # 文件上传配置
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 500MB
+      max-request-size: 500MB
+  
+  # JSON配置
+  jackson:
+    default-property-inclusion: non_empty
+  #注意事项这里需要配置自己的apikey，访问硅基流动官网注册：https://siliconflow.cn/
+  # Spring AI配置
+  ai:
+    openai:
+      api-key: your-api-key
+      base-url: https://api.siliconflow.cn
+      chat:
+        options:
+          model: deepseek-ai/DeepSeek-V3
+          temperature: 0.7
+        completions-path: /v1/chat/completions
+
+# DeepSeek API配置
+deepseek:
+  api:
+    base-url: "https://api.deepseek.com" # DeepSeek API 基础路径
+    api-key: "sk-1c3a1f11eff54a1399f056df9d7a646e" # DeepSeek API Key
+    model: "deepseek-chat" # 默认使用的模型，可根据需要修改
+
+# 服务器配置
+server:
+  port: 8889
+  servlet:
+    context-path: /
+
+# MyBatis-Plus配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# SpringDoc配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    enabled: true
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  enable-spring-security: false
+  paths-to-match: /**
+  packages-to-scan: org.example.springboot
+
+# Knife4j配置
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+  basic:
+    enable: true
+    username: admin
+    password: admin
+
+# JWT配置
+jwt:
+  secret: MySecretKeyForJWT2026!@#$%^&*()_+SecureKeyHere
+  expiration: 86400000  # 24小时（毫秒）
+  refresh-expiration: 604800000  # 7天（毫秒）
+  header: Authorization  # token头部名称
+  token-prefix: "Bearer "  # token前缀
+
+
+# 文件管理配置
+file:
+  upload:
+    path: ./files
+    maxSize: 524288000  # 500MB (500 * 1024 * 1024)
+  # 商品图片保存到 Vue3 前端 public 目录，实现跨机器访问
+  product-image:
+    save-path: ../vue3/public/image
+    access-path: /image

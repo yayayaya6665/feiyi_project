@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(mysql -uroot -pmysql123456 -h127.0.0.1 -P3306 heritage -e \"SELECT id, original_name, file_path, file_type, business_type, business_id, business_field, file_size, status, create_time FROM sys_file_info WHERE business_type = 'SHOP_PRODUCT' AND status = 1 ORDER BY create_time DESC LIMIT 10;\")",
+      "Bash(mysql -uroot -pmysql123456 -h127.0.0.1 -P3306 heritage -e \"SELECT business_field, COUNT\\(*\\) AS count FROM sys_file_info WHERE business_type = 'SHOP_PRODUCT' AND status = 1 GROUP BY business_field;\")",
+      "Bash(mysql -uroot -pmysql123456 -h127.0.0.1 -P3306 heritage -e \"SELECT id, original_name, file_path FROM sys_file_info WHERE business_type = 'SHOP_PRODUCT' AND status = 1 AND \\(file_path LIKE 'http%' OR file_path LIKE 'https%'\\) LIMIT 10;\")",
+      "Bash(mysql -uroot -pmysql123456 -h127.0.0.1 -P3306 heritage -e \"SELECT file_path, COUNT\\(*\\) AS count FROM sys_file_info WHERE business_type = 'SHOP_PRODUCT' AND status = 1 GROUP BY CASE WHEN file_path LIKE 'http%' THEN 'url' WHEN file_path LIKE '/files%' THEN 'local' ELSE 'other' END;\")",
+      "Bash(mysql -uroot -pmysql123456 -h127.0.0.1 -P3306 heritage --batch --raw -e \"SELECT id, original_name, file_path, business_id, business_field FROM sys_file_info WHERE business_type = 'SHOP_PRODUCT' AND status = 1\")"
+    ]
+  }
+}

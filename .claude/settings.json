@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd)",
+      "Bash(\"d:/digital_image/python313/python\" migrate_all_images.py)",
+      "Bash(mysql -uroot -pmysql123456 -h127.0.0.1 -P3306 heritage -e ' *)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"d:\\\\SOFTWARE\\\\test\\\\3_feiyi\\\\timestamp_script.ps1\")",
+      "Bash(\"d:/digital_image/python313/python\" timestamp_script.py)"
+    ]
+  }
+}

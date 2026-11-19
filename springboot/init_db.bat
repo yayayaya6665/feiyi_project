@@ -1,0 +1,6 @@
+@echo off
+echo Creating database...
+"D:\SOFTWARE\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -pmysql123456 -e "CREATE DATABASE IF NOT EXISTS heritage CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
+echo Importing data...
+"D:\SOFTWARE\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -pmysql123456 heritage < "d:\SOFTWARE\test\2_feiyi\serve\heritage.sql"
+echo Database setup completed.
