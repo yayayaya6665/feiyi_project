@@ -1,0 +1,9 @@
+[submodule "connection/test-connection"]
+	path = connection/test-connection
+	url = ./connection/test-connection
+[submodule "heritage/connection/test-connection"]
+	path = heritage/connection/test-connection
+	url = ./heritage/connection/test-connection
+[submodule "vue3"]
+	path = vue3
+	url = ./vue3
